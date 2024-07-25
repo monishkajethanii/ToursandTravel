@@ -1,0 +1,68 @@
+{
+    "1":{
+        "img": [
+            "uttarakhand.png",
+            "delhi.png",
+            "himachal.png",
+            "up.png",
+            "ladakh.png",
+            "jk.png",
+            "rajas.png"
+          ]
+    },
+    "2":{
+        "img": [
+            "uttarakhand.png",
+            "delhi.png",
+            "himachal.png",
+            "up.png",
+            "jk.png",
+            "rajas.png",
+            "ladakh.png"
+          ]
+    },
+    "3":{
+        "img": [
+            "uttarakhand.png",
+            "delhi.png",
+            "himachal.png",
+            "up.png",
+            "jk.png",
+            "rajas.png",
+            "ladakh.png"
+          ]
+    },
+    "4":{
+        "img": [
+            "uttarakhand.png",
+            "jk.png",
+            "rajas.png",
+            "delhi.png",
+            "himachal.png",
+            "up.png",
+            "ladakh.png"
+          ]
+    },
+    "5":{
+        "img": [
+            "uttarakhand.png",
+            "delhi.png",
+            "up.png",
+            "ladakh.png",
+            "jk.png",
+            "himachal.png",
+            "rajas.png"
+          ]
+    },
+    "6":{
+        "img": [
+            "uttarakhand.png",
+            "himachal.png",
+            "up.png",
+            "delhi.png",
+            "jk.png",
+            "rajas.png",
+            "ladakh.png"
+          ]
+    }
+}

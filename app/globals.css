@@ -2,32 +2,326 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.headtext{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  font-family:sans-serif;
+  padding-left: 20px;
+  stroke: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  margin-top: 50px;
+  /* line-height: 60px; */
+}
+.table th, .table td {
+  border: 2px solid #ddd;
+  padding: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.table tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.packtext{
+  margin-top: 40px;
+}
+.packtext h3{
+  margin-left: 60px;
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* 
+.packagecard{
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
+  margin-right: 30px;
+  height: 300px;
+} */
+
+.card{
+  height: 250px;
+  width: 200px;
+  margin: 30px;
+  box-shadow: 10px 15px 15px black;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+.img:hover img {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+.card h5{
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+}
+
+.card h3{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+.group{
+  height: 0px;
+}
+ .group:hover .box{
+  display: flex;
+}
+.box{
+  display: none;
+  width: 1000px;
+  margin-right: 20px;
+  padding: 20px;
+  top:auto;
+  justify-content: space-between;
+  justify-items: center;
+  border-radius: 18px;
+}
+
+/* states  */
+.inner-left-jammu {
+  position: relative;
+  overflow: hidden;
+  height: 500px; /* Adjust this value to increase the height */
+}
+
+.inner-left-jammu:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 95px; /* Default width */
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: #FFF;
+  transform-origin: bottom left;
+  transform: skew(-9deg, 0);
+}
+
+@media only screen and (max-width: 1100px) {
+  .inner-left-jammu:after {
+    width: 70px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media only screen and (max-width: 1024px) {
+  .inner-left-jammu:after {
+    width: 60px;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+/* anish nav bar */
+.group{
+  height: 0px;
+}
+ .group:hover .box{
+  display: flex;
+}
+.box{
+  display: none;
+  width: 1000px;
+  margin-right: 20px;
+  padding: 20px;
+  top:auto;
+  justify-content: space-between;
+  justify-items: center;
+  border-radius: 18px;
+}
+/* place holder */
+.text{
+  font-size: 14px;
+  left: 5%;
+  top: 23%;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.textinput:focus + .text,
+.textinput:not(:placeholder-shown) + .text{
+  top:-18%;
+  z-index: 10;
+  background: white;
+  transform: scale(0.8);
+}
+.emailText{
+  font-size: 14px;
+  left: 5%;
+  top: 23%;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);   
+}
+.emailBox:focus +.emailText,
+.emailBox:not(:placeholder-shown)+.emailText{
+  top: -20%;
+  z-index: 10;
+  background-color: white;
+  transform: scale(0.8);
+}
+.bg-image{
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+/* google */
+.tag{
+  margin-top: 5%;
+  border-top: 2px solid black;
+  border-style: dashed;
+  padding-left: 42%;
+  position: relative;
+}
+.googlebtn{
+  border: 2px solid black;
+  padding: 5%;
+  border-radius: 16px;
+ cursor: pointer;
+}
+/* img hover p display */
+.resp{
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: large;
+  color: white;
+  /* padding: 4px; */
+  /* background-color: black; */
+  --tw-bg-opacity: 0.6;
+  opacity: 0;
+}
+.nav-menu{
+  display: none;
+}
+@media only screen and (max-width: 955px){
+  .nav-item{
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 768px){
+  .nav-menu{
+    width: 1%;
+    display: block;
+    margin: 3%;
+  } 
+  .nav-item{
+    display: none ;
+    margin-left: 5%;
+    font-size: 16px;
+    position: absolute;
+    flex-direction: column;
+    align-content: space-between;
+    align-content: space-between;
+    width: 50%;
+    font-size: 12px;
+    z-index: 10; /* Ensure this is higher than the video */
+  }
+  .search-screen{
+    margin-left: 3%;
+    width: 70%;
+  }
+  .search-screen-icon{
+    padding-top: 1%;
+    padding-left: 4%;
+  }
+  .screen-text{
+    margin-top: -20px;
+  }
+  .text-space-1{
+    padding-top: 4%;
+  }
+  .text-space-2{
+    padding-top:14%;
+  }
+  .box{
+    font-size: 14px;
+    left: 2%;
+    width: 100%;
+    gap: 5px;
+    flex-direction: column;
+    padding-left: 9%;
+  }
+  .screen-options{
+    gap: 3px;
+    padding-top: 1%;
+  }
+  .head{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+  }
+  .north{
+   display: none;
+    transition: all;
+    transition-duration: 1s;
+    transition-delay: 3s;
+    transition-timing-function: ease-in-out;
+  }
+  .south{
+    display: none;
+  }
+  .east{
+    display: none;
+  }
+  .west{
+    display: none;
+  }
+  .central{
+    display: none;
+  }
+  .union{
+    display: none;
+  }
+  .text{
+    font-size: 14px;
+    left: 5%;
+    top: 21%;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .textinput:focus + .text,
+  .textinput:not(:placeholder-shown) + .text{
+    top:-18%;
+    z-index: 10;
+    background: white;
+    transform: scale(0.8);
+  }
+
+  .emailText{
+    font-size: 14px;
+    left: 5%;
+    top: 23%;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);   
+  }
+  .emailBox:focus +.emailText,
+  .emailBox:not(:placeholder-shown)+.emailText{
+    top: -20%;
+    z-index: 10;
+    background-color: white;
+    transform: scale(0.8);
+  }
+  #btn{
+    margin-left: 35%;
+  }
+  .googlebtn{
+    margin-left: 5%;
+    font-size: 14px;
+    
   }
 }
